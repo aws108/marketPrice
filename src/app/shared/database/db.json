@@ -1,0 +1,126 @@
+{
+    "supermarkets": [
+      { "id": 1, "name": "Mercadona", "location": "Cornellá", "address": "Carrer de l'Avinguda, 34", "opening_hours": "09:00-21:00", "latitude": 41.3502, "longitude": 2.0701 },
+      { "id": 2, "name": "Alcampo", "location": "Sant Boi", "address": "Carrer de Rubí, 21", "opening_hours": "08:00-22:00", "latitude": 41.3623, "longitude": 2.0454 },
+      { "id": 3, "name": "Caprabo", "location": "Cornellá", "address": "Carrer del Comerç, 12", "opening_hours": "09:00-20:30", "latitude": 41.3478, "longitude": 2.0752 },
+      { "id": 4, "name": "Dia", "location": "Rubí", "address": "Carrer de la Llum, 5", "opening_hours": "09:00-21:00", "latitude": 41.4923, "longitude": 2.0354 },
+      { "id": 5, "name": "Carrefour", "location": "El Prat", "address": "Avinguda de la Generalitat, 7", "opening_hours": "08:30-22:00", "latitude": 41.3245, "longitude": 2.0887 },
+      { "id": 6, "name": "Lidl", "location": "Cornellá", "address": "Carrer de Sant Jordi, 15", "opening_hours": "09:00-21:30", "latitude": 41.3552, "longitude": 2.0658 },
+      { "id": 7, "name": "Dia", "location": "Cornellá", "address": "Carrer de la Llum, 5", "opening_hours": "09:00-21:00", "latitude": 41.3483, "longitude": 2.0691 },
+      { "id": 8, "name": "Dia", "location": "Sant Boi", "address": "Carrer de la Llum, 5", "opening_hours": "09:00-21:00", "latitude": 41.3625, "longitude": 2.0459 },
+      { "id": 9, "name": "Lidl", "location": "Sant Boi", "address": "Carrer de la Llum, 5", "opening_hours": "09:00-21:00", "latitude": 41.3618, "longitude": 2.0437 },
+      { "id": 10, "name": "Dia", "location": "El Prat", "address": "Carrer de la Llum, 5", "opening_hours": "09:00-21:00", "latitude": 41.3257, "longitude": 2.0913 },
+      { "id": 11, "name": "Mercadona", "location": "Sant Boi", "address": "Carrer de la Llum, 5", "opening_hours": "09:00-21:00", "latitude": 41.3630, "longitude": 2.0460 },
+      { "id": 12, "name": "Mercadona", "location": "El Prat", "address": "Carrer de la Llum, 5", "opening_hours": "09:00-21:00", "latitude": 41.3271, "longitude": 2.0925 },
+      { "id": 13, "name": "Carrefour", "location": "Sant Cugat", "address": "Carrer de la Llum, 5", "opening_hours": "09:00-21:00", "latitude": 41.4732, "longitude": 2.0876 },
+      { "id": 14, "name": "Mercadona", "location": "Cornellá", "address": "Splau", "opening_hours": "09:00-21:00", "latitude": 41.3487, "longitude": 2.0735 }
+    ],
+    "locations": [
+      { "id": 1, "city": "Cornellá", "province": "Barcelona", "autonomous_community": "Cataluña", "country": "España", "code": "08940" },
+      { "id": 2, "city": "Rubí", "province": "Barcelona", "autonomous_community": "Cataluña", "country": "España", "code": "08191" },
+      { "id": 3, "city": "Sant Boi", "province": "Barcelona", "autonomous_community": "Cataluña", "country": "España", "code": "08830" },
+      { "id": 4, "city": "El Prat", "province": "Barcelona", "autonomous_community": "Cataluña", "country": "España", "code": "08820" },
+      { "id": 5, "city": "Sant Cugat", "province": "Barcelona", "autonomous_community": "Cataluña", "country": "España", "code": "08174" }
+    ],
+    "users": [
+      { "id": 1, "username": "Superadmin", "password": "Superadmin01", "role": "admin" }
+    ],
+    "sections": [
+      { "id": 1, "name": "Pescadería" },
+      { "id": 2, "name": "Carnicería" },
+      { "id": 3, "name": "Bollería" },
+      { "id": 4, "name": "Panadería" },
+      { "id": 5, "name": "Frutería" },
+      { "id": 6, "name": "Bebidas" },
+      { "id": 7, "name": "Limpieza" },
+      { "id": 8, "name": "Legumbres" },
+      { "id": 9, "name": "Pasta" },
+      { "id": 10, "name": "Lácteos" },
+      { "id": 11, "name": "Embutidos" },
+      { "id": 12, "name": "Arroces" },
+      { "id": 13, "name": "Salsas" }
+    ],
+    "products": [
+      {
+        "id": 1,
+        "name": "Atún fresco",
+        "current_price": 15.99,
+        "previous_price": 17.99,
+        "price_change": -2.00,
+        "unit": "kg",
+        "quantity": 1, 
+        "supermarket_id": 1,
+        "section_id": 1,
+        "price_history": [
+          { "date": "2024-08-01", "price": 17.99 },
+          { "date": "2024-09-01", "price": 16.99 },
+          { "date": "2024-10-01", "price": 15.99 }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Filetes de Pollo",
+        "current_price": 5.49,
+        "previous_price": 6.49,
+        "price_change": -1.00,
+        "unit": "kg",
+        "quantity": 1,
+        "supermarket_id": 1,
+        "section_id": 2,
+        "price_history": [
+          { "date": "2024-08-01", "price": 6.49 },
+          { "date": "2024-09-01", "price": 5.99 },
+          { "date": "2024-10-01", "price": 5.49 }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Croissants",
+        "current_price": 1.50,
+        "previous_price": 1.80,
+        "price_change": -0.30,
+        "unit": "unit",
+        "quantity": 3,
+        "supermarket_id": 2,
+        "section_id": 3,
+        "price_history": [
+          { "date": "2024-08-01", "price": 1.80 },
+          { "date": "2024-09-01", "price": 1.70 },
+          { "date": "2024-10-01", "price": 1.50 }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Pan Integral",
+        "current_price": 0.99,
+        "previous_price": 1.20,
+        "price_change": -0.21,
+        "unit": "unit",
+        "quantity": 1,
+        "supermarket_id": 2,
+        "section_id": 4,
+        "price_history": [
+          { "date": "2024-08-01", "price": 1.20 },
+          { "date": "2024-09-01", "price": 1.10 },
+          { "date": "2024-10-01", "price": 0.99 }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Manzanas",
+        "current_price": 2.30,
+        "previous_price": 2.50,
+        "price_change": -0.20,
+        "unit": "kg",
+        "quantity": 1,
+        "supermarket_id": 3,
+        "section_id": 5,
+        "price_history": [
+          { "date": "2024-08-01", "price": 2.50 },
+          { "date": "2024-09-01", "price": 2.40 },
+          { "date": "2024-10-01", "price": 2.30 }
+        ]
+      }
+    ]
+}
+  

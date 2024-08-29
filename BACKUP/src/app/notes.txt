@@ -1,0 +1,6 @@
+Para instalar la internacionalización: npm install @ngx-translate/core @ngx-translate/http-loader --save
+Para instalar el lado backend (jsonServer): npm install -g json-server
+Ejecutar el jsonServer con mi DB:
+
+Abre una terminal en la raíz de tu proyecto y ejecuta:
+json-server --watch src/app/shared/database/db.json

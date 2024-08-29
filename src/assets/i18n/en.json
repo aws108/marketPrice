@@ -1,0 +1,47 @@
+{
+    "HEADER": {
+        "WELCOME": "Welcome to Our Application",
+        "DESCRIPTION": "This is an example of a multi-language app using ngx-translate."
+    },
+    "NAVIGATION": {
+        "HOME": "Home",
+        "ABOUT": "About Us",
+        "SERVICES": "Services",
+        "CONTACT": "Contact"
+    },
+    "BUTTONS": {
+        "SUBMIT": "Submit",
+        "CANCEL": "Cancel",
+        "DELETE": "Delete",
+        "EDIT": "Edit"
+    },
+    "FORM": {
+        "NAME": "Name",
+        "EMAIL": "Email Address",
+        "PASSWORD": "Password",
+        "CONFIRM_PASSWORD": "Confirm Password",
+        "PLACEHOLDER": {
+            "NAME": "Enter your name",
+            "EMAIL": "Enter your email",
+            "PASSWORD": "Enter your password"
+        }
+    },
+    "MESSAGES": {
+        "SUCCESS": "Your data has been saved successfully!",
+        "ERROR": {
+            "REQUIRED": "This field is required.",
+            "EMAIL_INVALID": "Please enter a valid email address.",
+            "PASSWORD_MISMATCH": "Passwords do not match."
+        }
+    },
+    "FOOTER": {
+        "COPYRIGHT": "© 2024 Your Company. All rights reserved.",
+        "PRIVACY_POLICY": "Privacy Policy",
+        "TERMS_OF_SERVICE": "Terms of Service"
+    },
+    "DIALOGS": {
+        "DELETE_CONFIRMATION": "Are you sure you want to delete this item?",
+        "YES": "Yes",
+        "NO": "No"
+    }
+}
