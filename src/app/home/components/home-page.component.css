@@ -1,0 +1,37 @@
+.buttons-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    height: calc(100vh - 30px); /* Altura completa de la ventana */
+}
+
+.button-size {
+    display: flex;
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+    width: 40%; /* Ajustar el ancho del botón */
+    height: 40%; /* Ajustar la altura del botón */
+    margin: 10px; /* Espacio entre botones */
+    padding: 0; /* Eliminar relleno interno */
+    border: none; 
+    background-color: transparent; /* Opcional: fondo transparente para el botón */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+}
+
+.button-size img {
+    width: 80px; /* Ancho del icono */
+    height: 80px; /* Altura del icono */
+}
+
+.button-size img:hover{
+    width: 80px; /* Ancho del icono */
+    height: 80px; /* Altura del icono */
+    filter: drop-shadow(0 0 5px #40E0D0);
+}
+
+
+.footer{
+    display: flex;
+    justify-content: flex-end;
+}

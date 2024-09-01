@@ -1,1 +1,18 @@
-<p>Home Page. Se puede ir al directorio de supermercados o de productos en función de la localización</p>
+<div class="header"> <!-- COLOCAR A LA DERECHA DEL TODO Y MÁS PEGADOS!!! -->
+    <button class="btn" (click)="changeLanguage('en')"><img src="assets/flags/en.svg" alt="English"/></button>
+    <button class="btn" (click)="changeLanguage('es')"><img src="assets/flags/es.svg" alt="Español"/></button>
+    <button class="btn" (click)="changeLanguage('me')"><img src="assets/flags/meridional.svg" alt="Español meridional"/></button>
+</div>
+
+<div class="buttons-group">
+    <button class="btn button-size" routerLink="/markets/list" >
+        <img src="assets/img/market.svg" alt="Supermarkets list" data-bs-toggle="tooltip" data-bs-placement="top" [attr.title]="'home-tooltips.supermarket-list' | translate"/>
+    </button>
+    <button class="btn button-size" routerLink="/products/list">
+        <img src="assets/img/skin-care.svg" alt="Products list" data-bs-toggle="tooltip" data-bs-placement="top" [attr.title]="'home-tooltips.products-list' | translate"/>
+    </button>
+</div>
+
+<div class="footer">
+    <small><i>© All rights reserved. 2024</i></small>
+</div>

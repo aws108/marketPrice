@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomePageComponent } from './components/home-page.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { HomePageComponent } from './components/home-page.component';
   ],
   imports: [
     CommonModule,
+    TranslateModule,
     HomeRoutingModule,
     SharedModule,
   ]

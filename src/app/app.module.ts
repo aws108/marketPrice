@@ -4,10 +4,11 @@ import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-// import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
 export function HttpLoaderFactory(http: HttpClient) {
-  // return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
@@ -19,13 +20,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     CommonModule,
     HttpClientModule,
-    // TranslateModule.forRoot({
-    //   loader: {
-    //     provide: TranslateLoader,
-    //     useFactory: HttpLoaderFactory,
-    //     deps: [HttpClient]
-    //   }
-    // })
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
