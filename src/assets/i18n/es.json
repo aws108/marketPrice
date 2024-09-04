@@ -2,5 +2,13 @@
   "home-tooltips": {
     "supermarket-list": "Ver lista de supermercados.",
     "products-list": "Ver lista de productos."
+  },
+  "header": {
+    "en": "Inglés",
+    "es": "Español",
+    "me": "Meridional"
+  },
+  "footer": {
+    "rigthsReserved": "© Marketprice 2024. Todos los derechos reservados."
   }
 }

@@ -1,0 +1,11 @@
+<div class="header"> <!-- COLOCAR A LA DERECHA DEL TODO Y MÁS PEGADOS!!! INCLUIR TOOTLTIPS A LAS BANDERAS-->
+    <button class="btn" (click)="changeLanguage('en')">
+        <img src="assets/flags/en.svg" alt="English" data-bs-toggle="tooltip" data-bs-placement="top" [attr.title]="'header.en' | translate"/>
+    </button>
+    <button class="btn" (click)="changeLanguage('es')">
+        <img src="assets/flags/es.svg" alt="Español" data-bs-toggle="tooltip" data-bs-placement="top" [attr.title]="'header.es' | translate"/>
+    </button>
+    <button class="btn" (click)="changeLanguage('me')">
+        <img src="assets/flags/meridional.svg" alt="Español meridional" data-bs-toggle="tooltip" data-bs-placement="top" [attr.title]="'header.me' | translate"/>
+    </button>
+</div>

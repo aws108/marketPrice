@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: right;
+  gap: 0;
+  padding: 0;
+  margin-right: 0;
+}
+
+.btn {
+  padding: 0; /* Elimina cualquier espacio interno dentro del botón */
+  margin: 0; /* Elimina cualquier margen alrededor del botón */
+}
+
+
+.btn img:hover{
+  filter: drop-shadow(0 0 5px #40E0D0);
+}

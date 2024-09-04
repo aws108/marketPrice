@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, OnInit} from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 declare var bootstrap: any; //bootstrap no está tipado en TypeScript de manera predeterminada, tienes que importar Bootstrap manualmente en tu archivo TypeScript.
 
 @Component({
@@ -8,11 +7,10 @@ declare var bootstrap: any; //bootstrap no está tipado en TypeScript de manera 
 })
 export class HomePageComponent implements OnInit, AfterViewInit {
 
-  constructor(private translate: TranslateService){}
+  constructor(){}
 
   ngOnInit(): void {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+    
   }
 
   ngAfterViewInit(): void {
@@ -23,8 +21,6 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     });
   }
 
-  changeLanguage(language: string) {
-    this.translate.use(language);
-  }
+
 
 }

@@ -1,0 +1,13 @@
+@import '../../../styles.scss'; 
+.container{
+    display: flex;
+    height: calc(100vh - 75px); /* Altura completa de la ventana */
+}
+
+.color-button {
+    background-color: $marketprice-color;
+}
+
+.dropdown{
+    margin-right: 10px;
+}

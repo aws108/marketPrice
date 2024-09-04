@@ -1,6 +1,14 @@
 {
   "home-tooltips": {
-    "supermarket-list": "Véh lit·ta de çupermercaoh.",
-    "products-list": "Véh lit·ta de produt·toh."
+    "supermarket-list": "Véh liht·ta de çupermercaoh.",
+    "products-list": "Véh liht·ta de produht·toh."
+  },
+  "header": {
+    "en": "Inglê",
+    "es": "Ehp·pañó",
+    "me": "Meridioná"
+  },
+  "footer": {
+    "rigthsReserved": "© Marketprice 2024. Tô lô derechoh reçervaoh."
   }
 }

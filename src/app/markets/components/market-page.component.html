@@ -1,1 +1,29 @@
-<p>Página de supermerkados</p>
+<app-header></app-header> <!--HABRÍA QUE BUSCAR CÓMO HACER UN ESTILO PARA LOS BOTONES CON EL COLOR AZUL TURQUESA PARA TODO EL PROYECTO-->
+
+<div class="container">
+    <div class="dropdown">
+        <button class="btn dropdown-toggle color-button" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            {{'dropdowns.supermarket-municipality' | translate}}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li *ngFor="let marketLocation of supermarketsLocationList"><a class="dropdown-item">{{marketLocation}}</a></li>
+        </ul>
+    </div>
+    <div class="dropdown">
+        <button class="btn dropdown-toggle color-button" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            {{'dropdowns.supermarkets-name' | translate}}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li *ngFor="let marketName of supermarketsNameList"><a class="dropdown-item">{{marketName}}</a></li>
+        </ul>
+    </div>
+    <div class="dropdown">
+        <button class="btn dropdown-toggle color-button" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            {{'dropdowns.supermarket-location' | translate}}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li *ngFor="let marketName of supermarketsNameList"><a class="dropdown-item">{{marketName}}</a></li>
+        </ul>
+    </div>
+</div>
+<app-footer></app-footer>
