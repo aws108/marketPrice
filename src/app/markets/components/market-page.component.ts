@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseServiceService } from 'src/app/shared/services/database-service.service';
 import { Markets } from '../interfaces/markets.interface';
+import { MarketsService } from '../services/markets-service.service';
+
 
 @Component({
   templateUrl: './market-page.component.html',
@@ -8,7 +10,9 @@ import { Markets } from '../interfaces/markets.interface';
 })
 export class MarketPageComponent implements OnInit{
 
-  constructor(private dbService: DatabaseServiceService){}
+  constructor(private dbService: DatabaseServiceService,
+              private marketsService: MarketsService
+  ){}
 
   supermarketsList:any;
   supermarketsNameList: string[] = [];
@@ -23,6 +27,7 @@ export class MarketPageComponent implements OnInit{
       console.log('supermarkets', supermarkets)
       if (supermarkets){
         this.supermarketsList = supermarkets;
+        this.marketsService.interchangeSupermarketsList(supermarkets);
         this.loadDropdownOptions();
       }
     });

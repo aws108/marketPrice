@@ -1,7 +1,15 @@
 @import '../../../styles.scss'; 
 .container{
     display: flex;
+    flex-direction: column; /*Esto hace que el dropdown y el mapa esté uno debajo del otro*/
     height: calc(100vh - 75px); /* Altura completa de la ventana */
+}
+
+.dropdown-container{
+    display: flex;
+    flex-direction: row;
+    height: 44px;
+    margin-bottom: 10px;
 }
 
 .color-button {
