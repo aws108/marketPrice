@@ -1,9 +1,23 @@
 import { Component } from '@angular/core';
 import { Locations } from '../../interfaces/locations.interface';
-
-import * as L from 'leaflet';
 import { Markets } from '../../interfaces/markets.interface';
 import { MarketsService } from '../../services/markets-service.service';
+
+import * as L from 'leaflet';
+
+const iconRetinaUrl = 'assets/leaflet/images/marker-icon-2x.png';
+const iconUrl = 'assets/leaflet/images/marker-icon.png';
+const shadowUrl = 'assets/leaflet/images/marker-shadow.png';
+const iconDefault = L.icon({
+  iconRetinaUrl,
+  iconUrl,
+  shadowUrl,
+  iconSize: [25, 41], // Tamaño del icono
+  iconAnchor: [12, 41], // Punto donde se ancla el icono en las coordenadas
+  popupAnchor: [1, -34], // Punto donde el popup debe anclarse en el icono
+  shadowSize: [41, 41] // Tamaño de la sombra
+});
+L.Marker.prototype.options.icon = iconDefault;
 
 
 @Component({
@@ -25,8 +39,10 @@ export class MarketsLocationComponent {
 
   loadServices(): void {
     this.marketsService.passMarketstList$.subscribe(supermarkets =>{
+      console.log('superrrrrrrrs', supermarkets)
       if (supermarkets){
         this.supermarketsList = supermarkets;
+        this.addMarkers();
       }
     });
   }
@@ -42,12 +58,12 @@ export class MarketsLocationComponent {
       maxZoom: 19,
     }).addTo(this.map);
 
-    this.addMarkers();
+    // this.addMarkers();
   }
 
   addMarkers(): void {
     let locations:Locations[] = [];
-  
+    
     this.supermarketsList.forEach((market: Markets) => {
       if (market.address && market.latitude && market.longitude){
         locations.push({
