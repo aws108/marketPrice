@@ -3,27 +3,27 @@
 <div class="container">
     <div class="dropdown-container">
         <div class="dropdown">
-            <button class="btn dropdown-toggle color-button" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                {{'dropdowns.supermarket-municipality' | translate}}
+            <button class="btn dropdown-toggle color-button" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ selectedVillageName || 'dropdowns.supermarket-municipality' | translate}}
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li *ngFor="let marketLocation of supermarketsLocationList"><a class="dropdown-item">{{marketLocation}}</a></li>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li *ngFor="let marketLocation of supermarketsLocationList" (click)="setMunicipalityName(marketLocation)"><a class="dropdown-item">{{marketLocation}}</a></li>
             </ul>
         </div>
         <div class="dropdown">
-            <button class="btn dropdown-toggle color-button" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                {{'dropdowns.supermarkets-name' | translate}}
+            <button class="btn dropdown-toggle color-button" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false" [disabled]="showSupermarketDropdown">
+                {{ selectedMarketName || 'dropdowns.supermarkets-name' | translate}}
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li *ngFor="let marketName of supermarketsNameList"><a class="dropdown-item">{{marketName}}</a></li>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                <li *ngFor="let marketName of supermarketsNameList" (click)="setSupermarketName(marketName)"><a class="dropdown-item">{{marketName}}</a></li>
             </ul>
         </div>
         <div class="dropdown">
-            <button class="btn dropdown-toggle color-button" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                {{'dropdowns.supermarket-location' | translate}}
+            <button class="btn dropdown-toggle color-button" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false" [disabled]="showStreetMarket">
+                {{ selectedMarketAddress || 'dropdowns.supermarket-location' | translate}}
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li *ngFor="let marketName of supermarketsNameList"><a class="dropdown-item">{{marketName}}</a></li>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                <li *ngFor="let marketAddress of supermarketsStreetsList" (click)="setMarketOnMap(marketAddress)"><a class="dropdown-item">{{marketAddress}}</a></li>
             </ul>
         </div>
     </div>

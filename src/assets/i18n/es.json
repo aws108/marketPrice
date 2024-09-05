@@ -10,5 +10,13 @@
   },
   "footer": {
     "rigthsReserved": "© Marketprice 2024. Todos los derechos reservados."
+  },
+  "popUp": {
+    "opening-hours": "Horario de apertura"
+  },
+  "dropdowns": {
+    "supermarket-location": "Seleccione la ubicación",
+    "supermarkets-name": "Seleccione el supermercado",
+    "supermarket-municipality": "Seleccione su municipio"
   }
 }

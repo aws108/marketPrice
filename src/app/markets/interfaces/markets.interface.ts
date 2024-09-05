@@ -6,4 +6,5 @@ export interface Markets {
   opening_hours: string;
   latitude: number;
   longitude: number;
+  img: string;
 }

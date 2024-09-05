@@ -10,5 +10,13 @@
   },
   "footer": {
     "rigthsReserved": "© Marketprice 2024. Tô lô derechoh reçervaoh."
+  },
+  "popUp": {
+    "opening-hours": "Horario de apertura"
+  },
+  "dropdowns": {
+    "supermarket-location": "Selecciona la calle",
+    "supermarkets-name": "Selecciona el supermercao",
+    "supermarket-municipality": "Selecciona la ciudá"
   }
 }

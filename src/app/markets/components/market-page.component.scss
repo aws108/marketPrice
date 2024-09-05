@@ -19,3 +19,8 @@
 .dropdown{
     margin-right: 10px;
 }
+
+.dropdown-menu {
+    z-index: 1050; /* Bootstrap por defecto para dropdowns.*/
+    position: absolute; /* Importante para que funcione el z-index */
+}

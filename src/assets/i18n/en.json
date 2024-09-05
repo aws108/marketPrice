@@ -14,17 +14,10 @@
   "dropdowns": {
     "supermarkets-name": "Select a supermarket",
     "supermarket-municipality": "Select your municipality",
-    "supermarket-location": "Select your location",
-    "PASSWORD": "Password",
-    "CONFIRM_PASSWORD": "Confirm Password",
-    "PLACEHOLDER": {
-      "NAME": "Enter your name",
-      "EMAIL": "Enter your email",
-      "PASSWORD": "Enter your password"
-    }
+    "supermarket-location": "Select your location"
   },
-  "MESSAGES": {
-    "SUCCESS": "Your data has been saved successfully!",
+  "popUp": {
+    "opening-hours": "Opening hours",
     "ERROR": {
       "REQUIRED": "This field is required.",
       "EMAIL_INVALID": "Please enter a valid email address.",
