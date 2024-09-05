@@ -158,7 +158,7 @@ export class MarketsLocationComponent implements OnInit, OnDestroy {
               marker.on('popupopen', () => {
                 const button = document.getElementById('see-products-button');
                 if (button) {
-                  button.addEventListener('click', () => this.router.navigate(['/products/list'])); // No tendrá que ser la lista general, sino la del supermercado seleccionado
+                  button.addEventListener('click', () => this.router.navigate(['/products/list', market.id]));// OJOOOOO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 }
               });
             }
