@@ -18,6 +18,7 @@
   },
   "popUp": {
     "opening-hours": "Opening hours",
+    "see-products": "See products",
     "ERROR": {
       "REQUIRED": "This field is required.",
       "EMAIL_INVALID": "Please enter a valid email address.",

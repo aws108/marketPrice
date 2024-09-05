@@ -8,6 +8,7 @@ import { Subscription } from 'rxjs';
 import { DatabaseServiceService } from 'src/app/shared/services/database-service.service';
 import { LocationsVillage } from '../../interfaces/locations-village.interface';
 import { TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 const iconRetinaUrl = 'assets/leaflet/images/marker-icon-2x.png';
 const iconUrl = 'assets/leaflet/images/marker-icon.png';
@@ -44,6 +45,7 @@ export class MarketsLocationComponent implements OnInit, OnDestroy {
 
   constructor(private dbService: DatabaseServiceService,
               private translateService: TranslateService,
+              private router: Router,
               private marketsService: MarketsService){}
 
   ngOnInit(): void {
@@ -74,7 +76,6 @@ export class MarketsLocationComponent implements OnInit, OnDestroy {
 
   loadMapData(): void {
     this.dbService.getSupermarkets().subscribe(supermarkets => {
-      console.log('supermarkets', supermarkets)
       if (supermarkets) {
         this.supermarketsList = supermarkets;
         this.addMarkers();
@@ -147,10 +148,19 @@ export class MarketsLocationComponent implements OnInit, OnDestroy {
                   <img src="${market.img}" alt="${market.name}" style="width: 100px; height: auto; display: block; margin-bottom: 15px;">
                   <strong>${market.address}</strong> ${location.city} (${location.code}), ${location.province}
                   <p>${this.translateService.instant('popUp.opening-hours')}: ${market.opening_hours}</p>
+                  <button type="button" class="btn btn-link" id="see-products-button">${this.translateService.instant('popUp.see-products')}</>
                 </div>
               `);
               marker.addTo(this.map);
               marker.openPopup();
+
+              // Agrega un listener al botón del popup después de que se renderice el popup, ya que el html del popup es estático y no entiende el routerLink
+              marker.on('popupopen', () => {
+                const button = document.getElementById('see-products-button');
+                if (button) {
+                  button.addEventListener('click', () => this.router.navigate(['/products/list'])); // No tendrá que ser la lista general, sino la del supermercado seleccionado
+                }
+              });
             }
           }
         }
