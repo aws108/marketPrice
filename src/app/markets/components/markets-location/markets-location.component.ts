@@ -39,6 +39,8 @@ export class MarketsLocationComponent implements OnInit, OnDestroy {
   villageNameString: string = '';
   marketAddressString: string = '';
   locationSelected: LocationsVillage[] = [];
+  private langChangeSubscription!: Subscription;
+
 
   constructor(private dbService: DatabaseServiceService,
               private translateService: TranslateService,
@@ -48,6 +50,9 @@ export class MarketsLocationComponent implements OnInit, OnDestroy {
     this.loadMapData();
     this.loadServices();
     this.initMap();
+    this.langChangeSubscription = this.translateService.onLangChange.subscribe(() => {
+      this.getMarketMap();
+    });
   }
 
   loadServices(): void {
@@ -157,6 +162,9 @@ export class MarketsLocationComponent implements OnInit, OnDestroy {
     this.marketsListSub.unsubscribe();
     this.selectedVillageSub.unsubscribe();
     this.selectedMarketSub.unsubscribe();
+    if (this.langChangeSubscription) {
+      this.langChangeSubscription.unsubscribe();
+    }
   }
 
 }
